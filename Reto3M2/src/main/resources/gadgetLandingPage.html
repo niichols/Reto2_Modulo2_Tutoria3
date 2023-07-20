@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="wirth=device-width, initial-scale=1.0">
+  <script src="webjars/jquery/3.6.2/jquery.min.js"></script>
+  <script src="/webjars/bootstrap/5.1.0/js/bootstrap.min.js"></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"/>
+
+  <script defer src="JS/"></script>
+  <title>Home</title>
+</head>
+<body class="bg-image"
+      style="background-image: url('https://img.freepik.com/vector-gratis/fondo-monocromatico-blanco-estilo-papel_52683-66443.jpg?size=626&ext=jpg&ga=GA1.1.878239929.1688784399&semt=ais');
+      height: 100%;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-attachment: fixed;">
+<!-- fooder-->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand fw-bold" href="usuariosLandingPage.html"> <img src="https://img.icons8.com/ios-filled/50/FFFFFF/circuit.png"alt="" width="30" height="30" class="d-inline-block align-text-top">
+      El Mercader LTDA</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link"  href="usuariosLandingPage.html">Usuarios</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Productos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-danger" href="index.html" onclick="sessionStorage.clear()">Salir</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div style="width: 80%; text-align: center; margin: auto; padding: 5%;">
+  <h3 class="fw-bold" id="userGreeting">...</h3>
+
+  <div id="content">
+    <p>
+      <a class="btn btn-primary" data-bs-toggle="collapse" href="#verProductos" role="button" aria-expanded="false" aria-controls="collapseExample">
+        Ver Usuarios
+      </a>
+      <a class="btn btn-primary" data-bs-toggle="collapse" href="#formProductos" role="button" aria-expanded="false" aria-controls="collapseExample">
+        Agregar Usuarios
+      </a>
+    </p>
+    <div class="collapse" id="verProductos">
+      <h4 class="fw-bold">Productos Registrados</h4>
+      <div class="container border border-dark" style="width: 100%; text-align: center; margin: auto; padding: 2%;">
+        <table class="table" id="gadgetTable">
+
+        </table>
+      </div>
+    </div>
+
+    <br>
+    <div class="collapse align-content-center" id="formProductos">
+      <h4 class="fw-bold">Agregar Producto</h4>
+      <div class="container border-dark d-flex justify-content-center" style="width: 100%; text-align: center; margin: auto; padding: 2%;">
+
+        <form id="singUpForm" action="gadgetLandingPage.html">
+          <div class="mb-3">
+            <label for="inputId" class="fw-bold form-label">Id</label>
+            <input type="number" class="form-control" id="inputId" name="inputId">
+            <div class="invalid-feedback">Ingresa un ID valido</div>
+          </div>
+          <div class="mb-3">
+            <label for="inputIdentification" class="fw-bold form-label">Marca</label>
+            <input type="number" class="form-control" id="inputIdentification" name="inputIdentification">
+            <div class="invalid-feedback">Ingresa un Identificacion Valida</div>
+          </div>
+          <div class="mb-3">
+            <label for="inputName" class="fw-bold form-label">Categoria</label>
+            <input type="text" class="form-control" id="inputName" name="inputName">
+            <div class="invalid-feedback">Ingresa un Nombre valido</div>
+          </div>
+          <div class="mb-3">
+            <label for="inputAddress" class="fw-bold form-label">Nombre</label>
+            <input type="text" class="form-control" id="inputAddress" name="inputAddress">
+            <div class="invalid-feedback">Ingrese una direcccion valida</div>
+          </div>
+          <div class="mb-3">
+            <label for="inputCellphone" class="fw-bold form-label">Descripcion</label>
+            <input type="text" class="form-control" id="inputCellphone" name="inputCellphone">
+            <div class="invalid-feedback">Ingrese un numero celular valido</div>
+          </div>
+          <div class="mb-3">
+            <label for="inputEmail" class="fw-bold form-label">Precio</label>
+            <input type="email" class="form-control" id="inputEmail" name="inputEmail">
+            <div class="invalid-feedback" id="emailErrorMsg"></div>
+          </div>
+          <div class="mb-3">
+            <label for="inputZone" class="fw-bold form-label">Cantidad</label>
+            <input type="text" class="form-control" id="inputZone" name="inputZone">
+            <div class="invalid-feedback">Ingresa una zona valida</div>
+          </div>
+          <div class="mb-3">
+            <label for="inputType" class="fw-bold form-label">Foto</label>
+            <input type="text" class="form-control" id="inputType" name="inputType">
+            <div class="invalid-feedback">Ingresa un tipo de usuario valida</div>
+          </div>
+          <button class="btn btn-info" type="submit"> Crear</button>  <!-- LINKS DE BOTONES https://getbootstrap.com/docs/5.2/components/buttons/ -->
+        </form>
+      </div>
+
+    </div>
+
+  </div>
+</div>
+</body>
+</html>
